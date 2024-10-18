@@ -1,12 +1,27 @@
-import './index.css'
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import "./index.css";
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Projects from "./pages/Projects";
+import Dashboard from "./pages/Dashboard";
+import SingIn from "./pages/SingIn";
+import SingUp from "./pages/SingUp";
 
 function App() {
-
   return (
     <>
-    <p className='text-3xl'>iliass</p>
+      <BrowserRouter>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/about" element={<About />} />
+          <Route path="/projects" element={<Projects />} />
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/singIn" element={<SingIn />} />
+          <Route path="/singup" element={<SingUp />} />
+        </Routes>
+      </BrowserRouter>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
