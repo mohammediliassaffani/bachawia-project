@@ -6,11 +6,13 @@ import Projects from "./pages/Projects";
 import Dashboard from "./pages/Dashboard";
 import SingIn from "./pages/SingIn";
 import SingUp from "./pages/SingUp";
+import Header from "./Components/Header";
 
 function App() {
   return (
     <>
       <BrowserRouter>
+      <Header />
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
